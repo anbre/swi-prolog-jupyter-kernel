@@ -17,12 +17,10 @@ class PrologKernel(PrologBaseKernel):
     success_response = 'true'
     error_prefix = 'ERROR: '
     informational_prefix = '% '
-#    pl_path = '../prolog_server/jsonrpc_server.pl'
-    pl_path = '../sicstus_swi_server/jsonrpc_server.pl'
+    pl_path = '../prolog_server/jsonrpc_server.pl'
     program_arguments = ['swipl', # default (looked up in $PATH)
                          '-l', pl_path,
-                         '-t', 'jsonrpc_server_start',
-                         '-q']
+                         '-t', 'jsonrpc_server_start']
 
     kernel_display_name = prolog_implementation_name + ' kernel'
     implementation = kernel_display_name
